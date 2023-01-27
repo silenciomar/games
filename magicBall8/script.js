@@ -17,16 +17,5 @@ let getTruth = () => {
 }
 
 ball.addEventListener('click', getTruth)
-var Shake = require('shake.js');
-var myShakeEvent = new Shake({
-  threshold: 15, // optional shake strength threshold
-  timeout: 1000 // optional, determines the frequency of event generation
-});
 
-myShakeEvent.start();
-
-window.addEventListener('shake', getTruth, false)
-
-window.removeEventListener('shake', getTruth, false)
-
-myShakeEvent.stop();
+window.ondevicemotion = getTruth
