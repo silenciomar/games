@@ -1,0 +1,43 @@
+.triangle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 1px;
+  left: 13px;
+  background: transparent;
+  border-bottom: solid 179px #000000;
+  border-right: solid 113px transparent;
+  border-left: solid 113px transparent;
+  @include respond(desktop) {
+    background: transparent;
+    border-bottom: solid 211px #000000;
+    border-right: solid 138px transparent;
+    border-left: solid 138px transparent;
+  }
+  &__empty {
+    position: absolute;
+    top: 6px;
+    left: -106px;
+    width: 100px;
+    height: 100px;
+    border-bottom: solid 170px #ffffff;
+    border-right: solid 106px transparent;
+    border-left: solid 106px transparent;
+    @include respond(desktop) {
+      top: 8px;
+      left: -127px;
+      border-bottom: solid 196px #ffffff;
+      border-right: solid 127px transparent;
+      border-left: solid 127px transparent;
+    }
+  }
+  &__text {
+    font-style: 18px;
+    position: absolute;
+    transform: translate(-50%, 750%);
+    @include respond(desktop) {
+      font-size: 20px;
+      transform: translate(-50%, 650%);
+    }
+  }
+}

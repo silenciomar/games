@@ -1,0 +1,7 @@
+.main {
+  flex: 1 1 auto;
+  &__container {
+    align-self: center;
+    display: flex;
+  }
+}
